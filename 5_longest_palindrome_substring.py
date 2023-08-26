@@ -24,5 +24,27 @@ Constraints:
 s consist of only digits and English letters.
 '''
 
-#Solution
 
+# Solution
+
+def longestPalindrome(s: str) -> str:
+    def expand(left, right, str, temp_flag, temp_flag_length):
+        while left >= 0 and right < len(str) and str[left] == str[right]:
+            if (right - left + 1) > temp_flag_length:
+                temp_flag = str[left:right + 1]
+                temp_flag_length = (right - left + 1)
+            left -= 1
+            right += 1
+
+        return [temp_flag, temp_flag_length]
+
+    flag = ""
+    flag_length = 0
+
+    for i in range(len(s)):
+        flag, flag_length = expand(i, i, s, flag, flag_length)
+        flag, flag_length = expand(i, i + 1, s, flag, flag_length)
+    return flag
+
+
+print(longestPalindrome("babad"))

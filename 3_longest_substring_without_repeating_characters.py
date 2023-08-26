@@ -32,6 +32,7 @@ s consists of English letters, digits, symbols and spaces.
 
 '''
 
+
 # SOLUTION !
 
 def lengthOfLongestSubstring(self, s: str) -> int:
@@ -52,3 +53,6 @@ def lengthOfLongestSubstring(self, s: str) -> int:
             temp.add(s[right])
 
     return flag
+
+
+print(lengthOfLongestSubstring("bababa"))
