@@ -45,13 +45,13 @@ def convert( s: str, numRows: int) -> str:
         return flag
 
     for char in s:
+
         flag_list[index].append(char)
 
         if index == 0:
             oscillator = 1
         elif index == numRows - 1:
             oscillator = -1
-
         index += oscillator
 
     for row in range(numRows):

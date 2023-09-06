@@ -58,7 +58,6 @@ Since 4193 is in the range [-231, 231 - 1], the final result is 4193.
 ANSWER
 '''
 
-
 def myAtoi(s: str) -> int:
     s_len = len(s)
     i = 0
@@ -98,29 +97,3 @@ def myAtoi(s: str) -> int:
     return int(flag)
 
 print(myAtoi('   -41'))
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
