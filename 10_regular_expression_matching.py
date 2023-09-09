@@ -50,7 +50,8 @@ def isMatch(s: str, p: str) -> bool:
             cache[(i, j)] = dfs(i + 1, j + 1)
             return cache[(i, j)]
 
-        return False
+        cache[(i,j)] = False
+        return cache[(i,j)]
 
     return dfs(0, 0)
 
